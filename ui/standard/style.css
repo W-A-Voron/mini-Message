@@ -1,0 +1,14 @@
+/* Standard (Telegram-like) interface specific overrides go here.
+   Auth screens use ui/shared/base.css; chat list / chat window / settings
+   screens (next phase) will add their own rules in this file so the
+   look stays "1-в-1 как в Telegram" without touching Pro's stylesheet. */
+
+.toast-ok {
+  background: rgba(63, 191, 107, 0.15);
+  border: 1px solid #3fbf6b;
+  color: #3fbf6b;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin: 0;
+}

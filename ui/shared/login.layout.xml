@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Declarative screen description. app.js's renderLayout() walks this tree
+  (received as JSON from Bridge::handleGetLayout) and builds real DOM nodes.
+  "bind" attributes map to input state keys; "action" attributes map to
+  Bridge calls dispatched on click/submit.
+-->
+<screen id="login" title="Вход">
+  <panel class="auth-card">
+    <text class="auth-title">Messenger</text>
+    <text class="auth-subtitle">Вход без номера телефона и почты</text>
+
+    <panel class="interface-toggle">
+      <link id="ifaceStandard" action="switchInterface:standard">Обычный интерфейс</link>
+      <link id="ifacePro" action="switchInterface:pro">Профессиональный (бесплатно)</link>
+    </panel>
+
+    <field id="login" label="Логин" bind="login" type="text" required="true"/>
+    <field id="password" label="Пароль" bind="password" type="password" required="true"/>
+
+    <captcha id="loginCaptcha" bind="captchaToken"/>
+
+    <button id="submitLogin" action="login" variant="primary">Войти</button>
+    <link id="goRegister" action="navigate:register">Создать аккаунт</link>
+  </panel>
+</screen>

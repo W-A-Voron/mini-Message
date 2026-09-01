@@ -1,0 +1,84 @@
+body.pro {
+  display: block;
+  align-items: unset;
+  justify-content: unset;
+}
+
+.pro-layout {
+  display: flex;
+  height: 100vh;
+}
+
+.pro-layout #app {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cli-panel {
+  width: 420px;
+  background: #0b1218;
+  border-left: 1px solid #1f2b38;
+  display: flex;
+  flex-direction: column;
+  font-family: "Cascadia Code", "Consolas", monospace;
+  font-size: 13px;
+}
+
+.cli-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 1px solid #1f2b38;
+  color: var(--text-dim);
+}
+
+.cli-shell-badge {
+  background: #1f2b38;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+.cli-output {
+  flex: 1;
+  padding: 12px 14px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  color: #9be89b;
+}
+
+.cli-output .cli-line-cmd { color: var(--accent); }
+.cli-output .cli-line-err { color: var(--danger); }
+
+.cli-input-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-top: 1px solid #1f2b38;
+}
+.cli-prompt { color: var(--accent); }
+.cli-input-row input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 13px;
+}
+.cli-input-row input:focus { outline: none; }
+
+.cli-hint {
+  padding: 8px 14px 12px;
+  color: var(--text-dim);
+  font-size: 11px;
+  margin: 0;
+}
+.cli-hint code {
+  display: block;
+  margin-top: 4px;
+  color: #9be89b;
+}

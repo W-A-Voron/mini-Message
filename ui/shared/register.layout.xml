@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screen id="register" title="Регистрация">
+  <panel class="auth-card">
+    <text class="auth-title">Создать аккаунт</text>
+
+    <captcha id="preCaptcha" bind="captchaToken1"/>
+
+    <field id="login" label="Желаемый логин" bind="login" type="text" required="true"/>
+    <field id="displayName" label="Отображаемое имя" bind="displayName" type="text" required="true"/>
+    <field id="password" label="Желаемый пароль" bind="password" type="password" required="true"/>
+    <field id="passwordRepeat" label="Повторите пароль" bind="passwordRepeat" type="password" required="true"/>
+
+    <button id="submitRegister" action="register" variant="primary">Зарегистрироваться</button>
+
+    <!-- Shown only after a successful register call, per spec step 5:
+         "после этого ещё раз проходит капчу" before first use. -->
+    <panel id="postCaptchaPanel" class="hidden">
+      <text>Подтвердите, что вы не робот, чтобы начать пользоваться мессенджером</text>
+      <captcha id="postCaptcha" bind="captchaToken2"/>
+      <button id="finishRegister" action="finishRegister" variant="primary">Продолжить</button>
+    </panel>
+
+    <link id="goLogin" action="navigate:login">Уже есть аккаунт</link>
+  </panel>
+</screen>

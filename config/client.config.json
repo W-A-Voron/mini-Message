@@ -1,0 +1,21 @@
+{
+  "//": "This file is read at startup by Config::load() and can be edited without recompiling.",
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8443,
+    "use_tls": true
+  },
+  "interface": {
+    "//": "standard | pro  - can also be overridden at login screen / Settings",
+    "mode": "standard"
+  },
+  "storage": {
+    "//": "All message content lives ONLY on the client, per spec (server never sees plaintext history).",
+    "local_data_dir": "%APPDATA%/MessengerClient/data",
+    "local_db_file": "messages.local.db"
+  },
+  "limits": {
+    "free_max_upload_gb": 30,
+    "premium_max_upload_gb": -1
+  }
+}
